@@ -2,14 +2,55 @@ import React from "react";
 import "./OneMovie.css";
 import Modal from "./Modal";
 import { useState } from "react";
+import { getMovie } from "../services/api";
 
 const OneMovie = (props) => {
   const items = props.moviesFromApi.Search;
+  // console.log(items);
 
-  const [openModal, setOpenModal] = useState(false);
+  // const [openModal, setOpenModal] = useState(false);
+  const [results, setResults] = useState(true);
+  const [oneMovie, setOneMovie] = useState(true);
+
+  const getMovieById = (movieID) => {
+    console.log(movieID);
+
+    if (results === false) {
+      setResults(true);
+    }
+    setOneMovie(false);
+    getMovie(movieID).then((data) => {
+      setResults(data);
+    });
+  };
 
   return (
     <div className="movieContainer">
+      {items?.map((movieItem, index) => {
+        return (
+          <div key={index} className="oneMovieCard">
+            <h2>
+              {movieItem.Title} ({movieItem.Year})
+            </h2>
+            <img src={movieItem.Poster} alt={movieItem.Title} />
+            <button
+              onClick={() => getMovieById(movieItem.imdbID)}
+              className="openModalBtn"
+            >
+              more
+            </button>
+          </div>
+        );
+      })}
+      {oneMovie ? null : <Modal closeModal={setOneMovie} oneMovie={results} />}
+    </div>
+  );
+};
+
+export default OneMovie;
+
+{
+  /* <div className="movieContainer">
       {items &&
         items.map((item) => (
           <div className="oneMovieCard" key={item.imdbID}>
@@ -20,16 +61,14 @@ const OneMovie = (props) => {
             <button
               className="openModalBtn"
               onClick={() => {
-                setOpenModal(true);
+                getMovieById(item.imdbID);
               }}
             >
               More...
             </button>
           </div>
         ))}
-      {openModal && <Modal closeModal={setOpenModal} />}
-    </div>
-  );
-};
 
-export default OneMovie;
+      {oneMovie ? null : <Modal closeModal={setOneMovie} results={results} />}
+    </div> */
+}

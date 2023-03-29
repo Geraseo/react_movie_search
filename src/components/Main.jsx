@@ -1,7 +1,6 @@
 import { useState } from "react";
 import OneMovie from "./OneMovie";
 import SearchMovie from "./SearchMovies";
-import Modal from "./Modal";
 
 const Main = () => {
   const [moviesFromApi, setMoviesFromApi] = useState([]);
@@ -10,7 +9,7 @@ const Main = () => {
     setMoviesFromApi(movies);
   };
 
-  console.log(moviesFromApi);
+  // console.log(moviesFromApi);
 
   return (
     <div>
