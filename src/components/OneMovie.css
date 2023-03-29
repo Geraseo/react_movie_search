@@ -1,0 +1,36 @@
+.oneMovieCard {
+  border: 2px solid rgb(174, 174, 174);
+  border-radius: 10px;
+  width: 18em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: rgb(81, 81, 81);
+}
+.oneMovieCard img {
+  width: 15em;
+}
+.oneMovieCard h3 {
+  color: rgb(223, 223, 223);
+  margin: 1em;
+}
+.openModalBtn {
+  width: 200px;
+  height: 40px;
+  border: none;
+  border-radius: 6px;
+  background-color: cornflowerblue;
+  color: white;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+.movieContainer {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
