@@ -49,26 +49,25 @@ const OneMovie = (props) => {
 
 export default OneMovie;
 
-// {
-//   <div className="movieContainer">
-//       {items &&
-//         items.map((item) => (
-//           <div className="oneMovieCard" key={item.imdbID}>
-//             <h3>
-//               {item.Title} ({item.Year})
-//             </h3>
-//             <img src={item.Poster} alt="" />
-//             <button
-//               className="openModalBtn"
-//               onClick={() => {
-//                 getMovieById(item.imdbID);
-//               }}
-//             >
-//               More...
-//             </button>
-//           </div>
-//         ))}
-
-//       {oneMovie ? null : <Modal closeModal={setOneMovie} results={results} />}
-//     </div>
-// }
+{
+  /* <div className="movieContainer">
+      {items &&
+        items.map((item) => (
+          <div className="oneMovieCard" key={item.imdbID}>
+            <h3>
+              {item.Title} ({item.Year})
+            </h3>
+            <img src={item.Poster} alt="" />
+            <button
+              className="openModalBtn"
+              onClick={() => {
+                getMovieById(item.imdbID);
+              }}
+            >
+              More...
+            </button>
+          </div>
+        ))}
+      {oneMovie ? null : <Modal closeModal={setOneMovie} results={results} />}
+    </div> */
+}

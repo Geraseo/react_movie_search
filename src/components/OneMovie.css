@@ -12,9 +12,15 @@
 .oneMovieCard img {
   width: 15em;
 }
-.oneMovieCard h3 {
+.oneMovieCard h2 {
   color: rgb(223, 223, 223);
   margin: 1em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  display: block;
+  line-height: 1em; /* a */
+  max-height: 3em;
 }
 .openModalBtn {
   width: 200px;
@@ -29,7 +35,7 @@
 
 .movieContainer {
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   justify-content: center;
   flex-wrap: wrap;
   gap: 0.5em;
