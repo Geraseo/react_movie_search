@@ -11,6 +11,8 @@
 }
 .oneMovieCard img {
   width: 15em;
+  height: 350px;
+  object-fit: contain;
 }
 .oneMovieCard h2 {
   color: rgb(223, 223, 223);
@@ -20,7 +22,7 @@
   word-wrap: break-word;
   display: block;
   line-height: 1em; /* a */
-  max-height: 3em;
+  max-height: 2;
 }
 .openModalBtn {
   width: 200px;
