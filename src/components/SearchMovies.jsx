@@ -24,16 +24,19 @@ const SearchMovies = ({ setResults }) => {
   }, [searchWord]);
 
   return (
-    <div>
-      <input
-        className="searchInput"
-        type="text"
-        ref={inputRef}
-        placeholder="Search for movie"
-      />
-      <button className="btn" onClick={handleChange}>
-        Search
-      </button>
+    <div className="seachDiv">
+      <h2>Movie information</h2>
+      <div>
+        <input
+          className="searchInput"
+          type="text"
+          ref={inputRef}
+          placeholder="Search for movie"
+        />
+        <button className="btn" onClick={handleChange}>
+          Search
+        </button>
+      </div>
     </div>
   );
 };
